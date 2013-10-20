@@ -4,11 +4,11 @@ packages:
   browser:
     description: browser
     source: hosted
-    version: "0.8.3"
+    version: "0.8.1"
   crypto:
     description: crypto
     source: hosted
-    version: "0.8.3"
+    version: "0.8.1"
   google_fusiontables_v1_api:
     description: google_fusiontables_v1_api
     source: hosted
@@ -24,7 +24,7 @@ packages:
   http:
     description: http
     source: hosted
-    version: "0.8.3"
+    version: "0.8.1"
   js:
     description: js
     source: hosted
@@ -36,12 +36,12 @@ packages:
   meta:
     description: meta
     source: hosted
-    version: "0.8.3"
+    version: "0.8.1"
   oauth2:
     description: oauth2
     source: hosted
-    version: "0.8.3"
+    version: "0.8.1"
   path:
     description: path
     source: hosted
-    version: "0.8.3"
+    version: "0.8.1"

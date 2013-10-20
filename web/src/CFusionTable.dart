@@ -12,9 +12,8 @@ class CFusionTable
 
   CFusionTable()
   {
-    _gauth = new GoogleOAuth2(_clientID, ["https://www.google.com/fusiontables/"]);
-    print(_gauth);
-    var fusiontables = new Fusiontables(_gauth);
+    _gauth = new GoogleOAuth2(_clientID, [Fusiontables.FUSIONTABLES_SCOPE, 'http://localhost']);
+     var fusiontables = new Fusiontables(_gauth);
     fusiontables.query.sql('select ID, Name, Latitude, Longitude, Country, Territory, City, Photo, ROWID from '+_tableName,
         hdrs: false)
       .then(_loadData);

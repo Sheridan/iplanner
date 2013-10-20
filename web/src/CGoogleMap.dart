@@ -11,19 +11,19 @@ class CGoogleMap
 
   CGoogleMap()
   {
-    /*st.DB().get('gmap','current_center_lat',0);
-    st.DB().get('gmap','current_center_lon',0);
-    st.DB().get('gmap','current_zoom',5);*/
     _mapOptions = new MapOptions()
     ..zoom = st.Options().get('gmap', 'current_zoom', 8)
-    ..center = new LatLng(st.Options().get('gmap', 'current_center_lat', 0), st.Options().get('gmap', 'current_center_lng', 0))
-    ..mapTypeId = MapTypeId.ROADMAP
+    ..center = new LatLng(
+          st.Options().get('gmap', 'current_center_lat', 0), 
+          st.Options().get('gmap', 'current_center_lng', 0)
+                          )
+    ..mapTypeId = MapTypeId.HYBRID
     ;
   }
 
   void initialize()
   {
-    _map = new GMap(querySelector("#map_canvas"), _mapOptions);
+    _map = new GMap(query("#map_canvas"), _mapOptions);
     js.retain(_map);
     _map.onCenterChanged.listen((_)
     {
@@ -43,6 +43,5 @@ class CGoogleMap
         st.Options().write();
       });
     });
-
   }
 }
