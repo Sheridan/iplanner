@@ -1,0 +1,7 @@
+name: iplanner
+description: A sample web application
+dependencies:
+  browser: any
+  google_fusiontables_v1_api: any
+  google_maps: any
+  lawndart: any
